@@ -1,0 +1,10 @@
+require './dogyears'
+
+describe "#ageinyears" do
+
+it "should return age when method is called" do
+expect(age_in_years(32)).to eq(32)
+end
+
+
+
