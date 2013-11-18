@@ -36,7 +36,7 @@ puts "Let's play blackjack! Here are your first two cards."
 		puts score = score + card_values.sample
 		elsif answer_1 == "stay" && score == 21
 		puts "You win!"
-		elsif answer_1 == "stay" && score < 21 || answer_1 == "hit" && score > 21
+		elsif answer_1 == "stay" && score < 21
 		puts "You looooooose! Goodbye."
 		break
 		end
