@@ -20,28 +20,25 @@
 
 class Blackjack
 puts "Let's play blackjack! Here are your first two cards."
-	
-	card_values=Array.new
-	card_values = [1,2,3,4,5,6,7,8,9,10,11]
-	puts first_card = card_values.sample
-	puts second_card = card_values.sample
-	score = first_card + second_card
-	puts "Here is your total score:"
-	puts score
+        
+        card_values=Array.new
+        card_values = [1,2,3,4,5,6,7,8,9,10,11]
+        puts first_card = card_values.sample
+        puts second_card = card_values.sample
+        score = first_card + second_card
+        puts "Here is your total score:"
+        puts score
 
-	while score <= 21
-	puts "Hit or stay?"
-	answer_1 = gets.chomp.downcase
-		if answer_1 == "hit"
-		puts score = score + card_values.sample
-		elsif answer_1 == "stay" && score == 21
-		puts "You win!"
-		elsif answer_1 == "stay" && score <= 21
-		puts "You looooooose! Goodbye."
-		break
-		end
-		if answer_1 == "hit" && score >= 21
-			puts "You looooose!"
-		end
-	end
+        while score <= 21
+        puts "Hit or stay?"
+        answer_1 = gets.chomp.downcase
+                if answer_1 == "hit"
+                puts score = score + card_values.sample
+                elsif answer_1 == "stay" && score == 21
+                puts "You win!"
+                elsif answer_1 == "stay" && score < 21 
+                puts "You looooooose! Goodbye."
+                break
+                end
+        end
 end
