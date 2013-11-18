@@ -67,5 +67,7 @@ else
 	n << "s"
 end
 end
-puts new_arr3
+
+
+
 
