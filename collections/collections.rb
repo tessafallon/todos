@@ -4,6 +4,7 @@ puts names.sort{|n1, n2| n2<=>n1} #2
 puts names[1] #3
 puts names #4
 puts names2 = ["blake", "ashley", "scott"] #5
+names2.values_at(0,2,1) #6
 #7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
  # ["blake", "ashley", "scott"]
 names2 << "bl$ke" << "as$ley" << "sc$tt"
