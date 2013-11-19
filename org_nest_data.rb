@@ -40,10 +40,8 @@ languages.each_pair do |style, value|
     new_lang[name] = {} unless new_lang[name]
     type_hash.each_pair do |k, v|
       new_lang[name][k] = v
-      if key = "style"
-        new_lang[name][key] = style
-
-      end
+      
+        new_lang[name][:style] = style
     end
   end
 end
