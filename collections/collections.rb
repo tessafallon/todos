@@ -7,21 +7,21 @@ puts names2 = ["blake", "ashley", "scott"] #5
 names2.values_at(0,2,1) #6
 #7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
  # ["blake", "ashley", "scott"]
-names2 << "bl$ke" << "as$ley" << "sc$tt"
-puts names2.sort!{|n1, n2| n2<=>n1}
-names3 = Hash[names2.map{|n, n1|[n, n1]}]
+#names2 << "bl$ke" << "as$ley" << "sc$tt"
+#puts names2.sort!
+#puts names3 = Hash[names2.map{|n, n1|n => "n1"}]
 
 
 #8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
  # [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]
 values_8 = [100, 1000, 5, 2, 3, 15, 1, 1, 100]
 my_hash = Hash.new
-my_hash = [:less_than_10=>"n", :greater_than_10=>"n"]
+my_hash = {:less_than_10 =>[" "], :greater_than_10 =>[" "]}
 values_8.each do|n| 
 	if n<10
-		my_hash[0]=n
+		my_hash[:less_than_10] << n
 	else
-		my_hash[1]=n
+		my_hash[:greater_than_10] << n
 	end
 end
 
