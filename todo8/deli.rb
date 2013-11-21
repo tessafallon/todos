@@ -4,35 +4,34 @@
  
 #The line could look like this: ["1. Ashley", "2. Steve", "3. Blake"] 
  
-#Additionally we should be able to call a method called "now_serving" that removes the customer who is first in line and #returns their name.
+#Additionally we should be able to call a method called "now_serving" that 
+#removes the customer who is first in line and #returns their name.
  
 #Write a test and then write the class.
 
 class Deli
 
-def initialize(line)
-	@line = line
+def initialize
+	@line = []
 end
 
-def take_a_number (name)
-#add name to line array
-#index+1 to add number
-	@line << name
-	@line.each_with_index { |item, index| puts "#{index+1}. #{item}" }
+def take_a_number(name)
+	num = @line.length + 1
+	@line << "#{num}. #{name}" #this is where test needs access to array
 end
 
-def now_serving(yell_something)
+def now_serving
 	#find index[0]
-puts "Now serving #{@line[0]}"
-@line.slice!(0)
+puts "Now serving #{@line[0]}" unless @line.empty? == true
+return @line.slice!(0)
+end
 end
 
-end
 
-Awesome_deli = Deli.new([])
-
-Awesome_deli.take_a_number("Tessa")
-Awesome_deli.take_a_number("Katie")
-Awesome_deli.now_serving("Next!")
-Awesome_deli.now_serving("Next!")
-
+deli_name = Deli.new
+deli_name.take_a_number("Tessa")
+deli_name.take_a_number("Jim")
+deli_name.now_serving
+deli_name.now_serving
+deli_name.now_serving
+puts deli_name

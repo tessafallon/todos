@@ -11,10 +11,26 @@
 
 require './deli'
 
-describe "take_a_number" do
+   describe Deli, "#take_a_number" do
 
-it "should take a customer's name, append a number, and add to the instance variable line" do
-expect(take_a_number("Tessa")).to eq(["1. Tessa"])
+	it "should take a customer's name, append a number, and add to the instance variable line" do
+		expect(Deli.new.take_a_number("Tessa")).to eq(["1. Tessa"])
+  	end
+  end
+   
+   describe Deli, "#now_serving" do 
 
-end
-end
+   	it "should return the first customer in the array and then remove that person from the array" do
+   		expect(Deli.list.now_serving.to eq("1. Tessa")
+   	end
+   end
+   
+   describe Deli, "#now_serving" do
+
+   	it "should have removed the last person from the array and call the next person" do
+   		expect(Deli.new.now_serving("yelling!")).to eq("Now serving 2. Jim")
+   	end
+   end
+
+#give test access to line
+#refactor #take_a_number using index at array
