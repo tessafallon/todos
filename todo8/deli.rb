@@ -21,10 +21,18 @@ def take_a_number (name)
 	@line.each_with_index { |item, index| puts "#{index+1}. #{item}" }
 end
 
+def now_serving(yell_something)
+	#find index[0]
+puts "Now serving #{@line[0]}"
+@line.slice!(0)
+end
+
 end
 
 Awesome_deli = Deli.new([])
 
 Awesome_deli.take_a_number("Tessa")
 Awesome_deli.take_a_number("Katie")
+Awesome_deli.now_serving("Next!")
+Awesome_deli.now_serving("Next!")
 
