@@ -3,8 +3,9 @@
 num_hash = {:num1=> 33, :num2=>45, :num3 => 17, :num4 => 5}
 
 def key_for_min_value(hash)
-	val = hash.min
-	hash.each {|hash| (hash.empty?) ? (puts nil) : (puts val[0])}
+	hash.empty? {|hash| puts nil}
+	val = hash.min 
+	puts val[0]
 end
 
 key_for_min_value(num_hash)
