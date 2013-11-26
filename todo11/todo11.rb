@@ -3,10 +3,16 @@
 num_hash = {:num1=> 33, :num2=> 45, :num3 => 17, :num4 => 5}
 
 def key_for_min_value(hash)
-	values = []
-	hash.each {|k, v| values << v}
-	x = values.min
-	hash.each_pair {|k, v| (v==x) ? (return k) : nil}
+	if hash != {}
+		values = []	
+		hash.each {|k, v| values << v}
+		x = values.min
+		hash.each_pair {|k, v| (v==x) ? (return k) : nil}
+	else
+		nil
+	end
 end
 
 key_for_min_value(num_hash)
+
+#still returns { } for empty hash
