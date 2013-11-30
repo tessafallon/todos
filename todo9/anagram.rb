@@ -2,23 +2,21 @@
 #anagram detector
 
 class Anagram
-attr_accessor :anagrams, :word
+attr_accessor :matches, :word
 
 def initialize(word)
 	@word = word
-	@anagrams = []
+	@matches = []
 end
 
 def match(string1)
 wd = @word.chars.sort.to_s
-string1.each {|str| anagrams << str.chars.sort.to_s}
-anagrams.select {|wd2| (wd2==wd) ? (puts wd2) : nil }
+puts wd
+string1.each {|str| (str.chars.sort.to_s == wd) ? (@matches << str) : nil}
+return @matches
+
 end
 end
-
-
-burp = Anagram.new("burping")
-burp.match(%w(word2 bugs ants burps prubing))
 
 
 

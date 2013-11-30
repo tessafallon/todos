@@ -13,7 +13,7 @@ require './anagram'
 # Save this file as anagram_spec.rb
 # run it with rspec anagram_spec.rb
  
-Rspec.configure do |config|
+RSpec.configure do |config|
   # Use color in STDOUT
   config.color_enabled = true
  
