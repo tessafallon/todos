@@ -1,8 +1,13 @@
 class Array
   def version_sort
-      self.each {|name| puts name.match(/\d/)}
+    new_arr = []
+      self.collect! {|name| name.split('.').inspect}
+      self.each {|str| puts str.sort(1)}
+        #new_arr << name.match(/\d+\b/).to_s}
+      #new_arr.each {|item1, item2| puts item2.match(/\d+\b/).to_s}
   end
 end
+
 filenames = [
   "foo-1.10.2.ext",
   "foo-1.11.ext",
