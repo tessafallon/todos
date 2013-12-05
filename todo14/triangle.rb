@@ -9,15 +9,18 @@ end
 
 def kind
 	if side1 == side2 && side1 == side3
-		puts "That, my friend, is an equilateral triangle right there."
+		:equilateral
 	elsif side1 == side2 && side1 != side3 || side1 == side3 && side2 != side3 || side3 == side2 && side3 != side1
-		puts "Isoceles!"
+		:isoceles
 	elsif
 		side1 != side2 && side1 != side3 && side3 != side2
-		puts "Scalene it is."
+		:scalene
 	end
 end
 
 end
 
-Triangle.new(2,3,4).kind
+
+#triangle is an instance of class Triangle that has the attributes side1...
+#equilateral is a type of class Triangle [class equilateral < Triangle?]
+#equilateral needs to inherit the attributes of class Triangle
