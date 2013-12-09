@@ -5,7 +5,7 @@ test = ['cat', 'dog', 'fish', 'fish']
  
 def count(array)
 h = Hash.new {|hash, key| hash[key]=""}
-array.each {|a, b| p h[a] = a.each.count}
+array.each {|a| h[a] = array.count(a)}
 return h
 end
 
