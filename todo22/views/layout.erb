@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Birthdater</title>
+  </head>
+  <body>
+    <%= yield %>
+    <% if params.count > 2 %>
+      <a href="/"> << Again!</a>
+    <% end %>
+  </body>
+</html>
