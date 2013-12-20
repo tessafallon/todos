@@ -12,12 +12,25 @@
 # I'd like to be able to get all the keys in the hash in a descending alphabetized array.
  
 class FakeHashWrapper
+	attr_accessor :hash
+ 	KEYS = []
+ 	VALUES = []
  
  def initialize(key, value)
  	@hash = {key => value}
+ 	KEYS << key
+ 	VALUES << value
  end
  
+ def hash
+ 	@hash
+ end
+
+ def keys
+ 	KEYS.each {|letter| p letter }
+
+ 	end
 end
 
-my_hash = FakeHashWrapper.new(:dog, "spot")
-p my_hash.inspect
+my_hash = FakeHashWrapper.new(:adog, "spot")
+p my_hash.keys
