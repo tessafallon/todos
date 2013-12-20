@@ -26,11 +26,30 @@ class FakeHashWrapper
  	@hash
  end
 
- def keys
- 	KEYS.each {|letter| p letter }
+ def add_values(key, value)
+ 	@hash[key] = value
+ 	KEYS << key
+ 	VALUES << value
+ end
 
+ def keys(var)
+ 	KEYS.each do |letter| if letter.to_s[0] == var 
+ 		return letter
+ 		end
  	end
+ end
+
+ def alpha
+ 	alpha_array = []
+ 	KEYS.each do |key| alpha_array << key.to_s
+ 	end
+ 	alpha_array.sort
+  end
 end
 
 my_hash = FakeHashWrapper.new(:adog, "spot")
-p my_hash.keys
+ my_hash.add_values("aogs", "fluffy")
+ my_hash.add_values("zebra", "zippy")
+ my_hash.add_values("kangaroo", "hoppy")
+ p my_hash.hash
+ p my_hash.alpha
