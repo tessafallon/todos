@@ -13,14 +13,9 @@
 class Array
 	
 	def my_transpose(array2)
-	self.each_slice(1) do |item| p item << array2.slice(0)
-	# self.each do |item| p Array.new << item
-	# array2.each do |item| item
-	# end
-	# end
-
-end
-end
+	self.each_slice(1) do |item| p item << array2.shift
+		end
+	end
 end
 
 array1 = Array.new
